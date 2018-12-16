@@ -1,13 +1,51 @@
 spring:
+  profiles:
+    active: peer1
+
+---
+server:
+  port: 28081
+spring:
+  profiles: peer1
   application:
     name: eureka-server
-server:
-  port: 28080
 eureka:
   instance:
-    hostname: localhost
+    hostname: peer1
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    fetch-registry: true
+    register-with-eureka: true
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://peer2:28082/eureka/,http://peer3:28083/eureka/
+
+---
+server:
+  port: 28082
+spring:
+  profiles: peer2
+  application:
+    name: eureka-server
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://peer1:28081/eureka/,http://peer3:28083/eureka/
+
+---
+server:
+  port: 28083
+spring:
+  profiles: peer3
+  application:
+    name: eureka-server
+eureka:
+  instance:
+    hostname: peer3
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://peer2:28082/eureka/,http://peer1:28081/eureka/
