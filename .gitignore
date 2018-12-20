@@ -5,3 +5,7 @@
 *.iws
 *.iml
 *.ipr
+
+*/.mvn/
+*/mvnw
+*/mvnw.cmd

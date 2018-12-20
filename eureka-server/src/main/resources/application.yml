@@ -13,10 +13,10 @@ eureka:
   instance:
     hostname: peer1
   client:
-    fetch-registry: true
-    register-with-eureka: true
+    fetch-registry: false
+    register-with-eureka: false
     service-url:
-      defaultZone: http://peer2:28082/eureka/,http://peer3:28083/eureka/
+      defaultZone: http://localhost:${server.port}/eureka/
 
 ---
 server:
