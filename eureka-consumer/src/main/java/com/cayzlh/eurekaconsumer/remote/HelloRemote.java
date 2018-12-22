@@ -1,15 +1,17 @@
 package com.cayzlh.eurekaconsumer.remote;
 
+import com.cayzlh.eurekaconsumer.hystrix.HelloRemoteHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * @author chenanyu
  * @Description HelloRemote
+ *
+ * @author chenanyu
  * @date 2018-12-19.
  */
-@FeignClient(name = "eureka-producer")
+@FeignClient(name = "eureka-producer", fallback = HelloRemoteHystrix.class)
 public interface HelloRemote {
 
     /**
