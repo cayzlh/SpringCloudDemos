@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: config-client-git
+server:
+  port: 28089
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
