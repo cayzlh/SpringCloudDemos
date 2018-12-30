@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: hystrix-dashboard-turbine
+server:
+  port: 28087
+management:
+  port: 28086
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:28081/eureka/
+turbine:
+  app-config: eureka-consumer
+  cluster-name-expression: new String("default")
+  combine-host-port: true
