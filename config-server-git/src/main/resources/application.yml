@@ -1,4 +1,9 @@
 spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   application:
     name: config-server
   cloud:
@@ -7,5 +12,18 @@ spring:
         git:
           uri: https://github.com/chenanyu/SpringCloudDemos # 配置git仓库的地址
           search-paths: config-repo # git仓库地址下的相对地址，可以配置多个，用,分割。
+    bus:
+      enabled: true
+      trace:
+        enabled: true
 server:
   port: 28088
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:28081/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

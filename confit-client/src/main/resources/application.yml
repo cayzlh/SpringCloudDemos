@@ -1,6 +1,11 @@
 spring:
   application:
     name: config-client-git
+  cloud:
+    enabled: true
+    bus:
+      trace:
+        enabled: true
 server:
   port: 28089
 management:

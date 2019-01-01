@@ -6,6 +6,8 @@
 - [SpringCloud（Hystrix熔断监控面板）](https://blog.cayzlh.com/2018/12/23/2018122302/)
 - [SpringCloud（Hystrix监控数据聚合Turbine）](https://blog.cayzlh.com/2018/12/29/2018122901/)
 - [SpringCloud（Git版配置中心）](https://blog.cayzlh.com/2018/12/30/2018123001/)
+- [SpringCloud（配置中心服务化与高可用）](https://blog.cayzlh.com/2018/12/31/2018123101/)
+- [SpringCloud（配置中心和消息总线）](https://blog.cayzlh.com/2019/01/01/2019010101/)
 
 ---
 
