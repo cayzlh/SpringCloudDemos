@@ -8,6 +8,7 @@
 - [SpringCloud（Git版配置中心）](https://blog.cayzlh.com/2018/12/30/2018123001/)
 - [SpringCloud（配置中心服务化与高可用）](https://blog.cayzlh.com/2018/12/31/2018123101/)
 - [SpringCloud（配置中心和消息总线）](https://blog.cayzlh.com/2019/01/01/2019010101/)
+- [SpringCloud（服务网关zuul）](https://blog.cayzlh.com/2019/01/03/2019010301/)
 
 ---
 
